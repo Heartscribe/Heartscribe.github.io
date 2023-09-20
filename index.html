@@ -3,30 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Language Selection</title>
+    <title>Heartscribe Language Selection</title>
     <style>
         body {
+            margin: 0;
+            padding: 0;
+            background-image: url('background-image.jpg'); /* 背景图片路径 */
+            background-size: cover;
+            background-position: center;
             font-family: Arial, sans-serif;
-            background-color: #f2f2f2;
         }
 
         .container {
-            max-width: 400px;
+            max-width: 800px;
             margin: 0 auto;
             padding: 20px;
-            background-color: #fff;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-            border-radius: 5px;
+            background-color: rgba(255, 255, 255, 0.8);
         }
 
         h1 {
             text-align: center;
+            margin-top: 0;
+        }
+
+        .logo {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 100px; /* LOGO 宽度 */
+            height: 100px; /* LOGO 高度 */
         }
 
         .language-list {
             list-style-type: none;
             padding: 0;
             margin: 20px 0;
+            text-align: left; /* 按钮位于页面左侧 */
         }
 
         .language-list li {
@@ -34,26 +46,43 @@
         }
 
         .language-link {
-            display: block;
-            padding: 10px;
-            background-color: #e0e0e0;
-            color: #333;
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #808080;
+            color: #fff;
             text-decoration: none;
             border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* 添加边框颜色过渡效果 */
+            border: 2px solid #fff; /* 添加白色边框 */
         }
 
         .language-link:hover {
-            background-color: #ccc;
+            background-color: #fff;
+            color: #000;
+            border-color: #00bfff; /* 鼠标悬停时改变边框颜色为天蓝色 */
+        }
+
+        .language-link:hover::before {
+            content: "欢迎-"; /* 鼠标悬停时修改按钮文字内容 */
+        }
+
+        .language-link[href="#zh-hant"]:hover::before {
+            content: "歡迎-"; /* 鼠标悬停时修改按钮文字内容 */
+        }
+
+        .language-link[href="#en"]:hover::before {
+            content: "Welcome-"; /* 鼠标悬停时修改按钮文字内容 */
         }
     </style>
 </head>
 <body>
     <div class="container">
+        <img class="logo" src="logo.png" alt="Logo"> <!-- LOGO 图片路径 -->
         <h1>Select Language</h1>
         <ul class="language-list">
-            <li><a class="language-link" href="zh-Hans/index.html">简体中文</a></li>
-            <li><a class="language-link" href="zh-Hant/index.html">繁體中文</a></li>
-            <li><a class="language-link" href="en/index.html">English</a></li>
+            <li><a class="language-link" href="#">简体中文</a></li>
+            <li><a class="language-link" href="#zh-hant">繁體中文</a></li>
+            <li><a class="language-link" href="#en">English</a></li>
         </ul>
     </div>
 </body>
