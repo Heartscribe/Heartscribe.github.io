@@ -10,9 +10,13 @@
             margin: 0;
             padding: 0;
             background-image: url('background-image.webp'); /* 背景图片 */
-            background-size: cover;
-            background-position: center center; /* 居中显示 */
+            background-size: cover; /* 填充显示 */
+            background-repeat: no-repeat;
+            background-position: center center;
             font-family: Arial, sans-serif;
+        }
+        html, body {
+            height: 100%; /* 设置高度为100% */
         }
 
         /* 在图片前添加一个背景色，并在其中显示图片的alt属性值 */
