@@ -3,15 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Heartscribe Language Selection</title>
+    <title>Heartscribe Language Selection Page</title>
     <style>
         body {
             margin: 0;
             padding: 0;
-            background-image: url('background-image.jpg'); /* 背景图片路径 */
+            background-image: url('background-image.jpg'); /* 背景图片 */
             background-size: cover;
             background-position: center;
             font-family: Arial, sans-serif;
+        }
+
+        img::before {
+            background-color: #eeeeee;
+            border: #aaaaaa;
+            display: block;
+            height: 100%;
+            content: attr(alt); /* 给未加载的图片提供空白背景 */
+            text-align: center;
         }
 
         .container {
@@ -62,22 +71,35 @@
             border-color: #00bfff; /* 鼠标悬停时改变边框颜色为天蓝色 */
         }
 
-        .language-link:hover::before {
-            content: "欢迎-"; /* 鼠标悬停时修改按钮文字内容 */
+        .language-link[href="zh-Hans/index.html"]:hover::before {
+            content: "欢迎访问随文学社"; /* 鼠标悬停时修改按钮文字内容 */
         }
 
-        .language-link[href="#zh-hant"]:hover::before {
-            content: "歡迎-"; /* 鼠标悬停时修改按钮文字内容 */
+        .language-link[href="zh-Hans/index.html"]:hover::after {
+            content: "页面！"; 
         }
 
-        .language-link[href="#en"]:hover::before {
-            content: "Welcome-"; /* 鼠标悬停时修改按钮文字内容 */
+        .language-link[href="zh-hant/index.html"]:hover::before {
+            content: "歡迎訪問隨文學社"; 
         }
+
+        .language-link[href="zh-hant/index.html"]:hover::after {
+            content: "頁面！"; 
+        }
+
+        .language-link[href="en/index.html"]:hover::before {
+            content: "Welcome to HEARTSCRIBE LITERATURE CLUB "; 
+        }
+
+        .language-link[href="en/index.html"]:hover::after {
+            content: " page!"; 
+        }
+
     </style>
 </head>
 <body>
     <div class="container">
-        <img class="logo" src="logo.png" alt="Logo"> <!-- LOGO 图片路径 -->
+        <img class="logo" src="logo.png" alt="Logo"> <!-- LOGO 图片 -->
         <h1>Select Language</h1>
         <ul class="language-list">
             <li><a class="language-link" href="zh-Hans/index.html">简体中文</a></li>
