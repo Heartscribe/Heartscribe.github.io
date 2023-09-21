@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Heartscribe Language Selection Page</title>
     <style>
+        /* 设置页面的背景样式 */
         body {
             margin: 0;
             padding: 0;
@@ -14,6 +15,7 @@
             font-family: Arial, sans-serif;
         }
 
+        /* 在图片前添加一个背景色，并在其中显示图片的alt属性值 */
         img::before {
             background-color: #eeeeee;
             border: #aaaaaa;
@@ -23,6 +25,7 @@
             text-align: center;
         }
 
+        /* 设置页面容器的样式 */
         .container {
             max-width: 800px;
             margin: 0 auto;
@@ -30,11 +33,13 @@
             background-color: rgba(255, 255, 255, 0.8);
         }
 
+        /* 设置标题的样式 */
         h1 {
             text-align: center;
             margin-top: 0;
         }
 
+        /* 设置logo图片的样式 */
         .logo {
             position: absolute;
             top: 20px;
@@ -43,6 +48,7 @@
             height: 100px; /* LOGO 高度 */
         }
 
+        /* 设置语言列表的样式 */
         .language-list {
             list-style-type: none;
             padding: 0;
@@ -50,10 +56,12 @@
             text-align: left; /* 按钮位于页面左侧 */
         }
 
+        /* 设置每个语言链接的样式 */
         .language-list li {
             margin-bottom: 10px;
         }
 
+        /* 设置语言链接的样式 */
         .language-link {
             display: inline-block;
             padding: 10px 20px;
@@ -65,32 +73,39 @@
             border: 2px solid #fff; /* 添加白色边框 */
         }
 
+        /* 鼠标悬停时，改变语言链接的背景色、文字颜色和边框颜色 */
         .language-link:hover {
             background-color: #fff;
             color: #000;
             border-color: #00bfff; /* 鼠标悬停时改变边框颜色为天蓝色 */
         }
 
+        /* 鼠标悬停在简体中文链接上时，在链接前显示欢迎访问随文学社 */
         .language-link[href="zh-Hans/index.html"]:hover::before {
             content: "欢迎访问随文学社"; /* 鼠标悬停时修改按钮文字内容 */
         }
 
+        /* 鼠标悬停在简体中文链接上时，在链接后显示页面 */
         .language-link[href="zh-Hans/index.html"]:hover::after {
             content: "页面！"; 
         }
 
+        /* 鼠标悬停在繁体中文链接上时，在链接前显示歡迎訪問隨文學社 */
         .language-link[href="zh-Hant/index.html"]:hover::before {
             content: "歡迎訪問隨文學社"; 
         }
 
+        /* 鼠标悬停在繁体中文链接上时，在链接后显示頁面 */
         .language-link[href="zh-Hant/index.html"]:hover::after {
             content: "頁面！"; 
         }
 
+        /* 鼠标悬停在英文链接上时，在链接前显示Welcome to HEARTSCRIBE LITERATURE CLUB */
         .language-link[href="en/index.html"]:hover::before {
             content: "Welcome to HEARTSCRIBE LITERATURE CLUB "; 
         }
 
+        /* 鼠标悬停在英文链接上时，在链接后显示page! */
         .language-link[href="en/index.html"]:hover::after {
             content: " page!"; 
         }
