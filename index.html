@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Heartscribe Language Selection Page</title>
+    <title>Language Selection Page - Heartscribe</title>
     <style>
         /* 设置页面的背景样式 */
         body {
@@ -16,12 +16,13 @@
         }
 
         /* 在图片前添加一个背景色，并在其中显示图片的alt属性值 */
+        /* 给未加载的图片提供空白背景 */
         img::before {
             background-color: #eeeeee;
             border: #aaaaaa;
             display: block;
             height: 100%;
-            content: attr(alt); /* 给未加载的图片提供空白背景 */
+            content: attr(alt); 
             text-align: center;
         }
 
@@ -53,7 +54,6 @@
             list-style-type: none;
             padding: 0;
             margin: 20px 0;
-            text-align: left; /* 按钮位于页面左侧 */
         }
 
         /* 设置每个语言链接的样式 */
@@ -80,32 +80,32 @@
             border-color: #00bfff; /* 鼠标悬停时改变边框颜色为天蓝色 */
         }
 
-        /* 鼠标悬停在简体中文链接上时，在链接前显示欢迎访问随文学社 */
+        /* 鼠标悬停在简体中文链接上时，在链接前显示“欢迎访问随文学社” */
         .language-link[href="zh-Hans/index.html"]:hover::before {
-            content: "欢迎访问随文学社"; /* 鼠标悬停时修改按钮文字内容 */
+            content: "欢迎访问随文学社"; 
         }
 
-        /* 鼠标悬停在简体中文链接上时，在链接后显示页面 */
+        /* 鼠标悬停在简体中文链接上时，在链接后显示“页面” */
         .language-link[href="zh-Hans/index.html"]:hover::after {
             content: "页面！"; 
         }
 
-        /* 鼠标悬停在繁体中文链接上时，在链接前显示歡迎訪問隨文學社 */
+        /* 鼠标悬停在繁体中文链接上时，在链接前显示“歡迎訪問隨文學社” */
         .language-link[href="zh-Hant/index.html"]:hover::before {
             content: "歡迎訪問隨文學社"; 
         }
 
-        /* 鼠标悬停在繁体中文链接上时，在链接后显示頁面 */
+        /* 鼠标悬停在繁体中文链接上时，在链接后显示“頁面” */
         .language-link[href="zh-Hant/index.html"]:hover::after {
             content: "頁面！"; 
         }
 
-        /* 鼠标悬停在英文链接上时，在链接前显示Welcome to HEARTSCRIBE LITERATURE CLUB */
+        /* 鼠标悬停在英文链接上时，在链接前显示“Welcome to HEARTSCRIBE LITERATURE CLUB” */
         .language-link[href="en/index.html"]:hover::before {
             content: "Welcome to HEARTSCRIBE LITERATURE CLUB "; 
         }
 
-        /* 鼠标悬停在英文链接上时，在链接后显示page! */
+        /* 鼠标悬停在英文链接上时，在链接后显示“page!” */
         .language-link[href="en/index.html"]:hover::after {
             content: " page!"; 
         }
